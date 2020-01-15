@@ -6,3 +6,4 @@
 * Clientside teleport from Pindrought#5849
 * Vehicles and Helicopters are supported 
 * The Vehicles are teleported Serverside and there is a teleport script for players Severside ( shouldn't be used , just in case )
+* When you do /bounds , the map bounds are removed
