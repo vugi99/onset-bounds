@@ -1,6 +1,6 @@
 {
 	"author": "Voltaism",
-	"version": "1.0",
+	"version": "1.1",
         "server_scripts": [
                 "server/map_bounds.lua",
                 "server/json.lua"

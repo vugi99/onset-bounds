@@ -44,6 +44,27 @@ function OnKeyPress(key)
         local ScreenX, ScreenY = GetScreenSize()
         SetMouseLocation(ScreenX/2, ScreenY/2)
         local x,y,z = GetMouseHitLocation()
+        local entityType, entityId = GetMouseHitEntity()
+        if entityType==2 then
+            local cx, cy, cz = GetCameraForwardVector()
+            local ltx = x+cx*65
+            local lty = y+cy*65
+            local ltz = z+cz*65
+            local eltx = x+cx*65+cx*10000
+            local elty = y+cy*65+cy*10000
+            local eltz = z+cz*65+cz*10000
+            local hittype, hitid, impactX, impactY, impactZ = LineTrace(ltx,lty,ltz,eltx,elty,eltz,4)
+                x=impactX
+                y=impactY
+                z=impactZ
+                entityType=hittype
+                entityId=hitid
+                if entityType==2 then
+                   x=0
+                   y=0
+                   z=0
+                end
+        end
         if (x ~= 0 and y ~= 0) then
             if selectphase==1 then
             firstx=x
