@@ -10,7 +10,7 @@ local curbounds = {}
 local default = {
     maxx = 264286,
     maxy = 264744,
-    minx = -131797,
+    minx = -250000,
     miny = -340190
 }
 
