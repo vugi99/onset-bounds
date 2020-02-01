@@ -1,11 +1,18 @@
 {
 	"author": "Voltaism",
-	"version": "1.2",
+	"version": "1.3",
+        "onset_build": "1.0.3",
         "server_scripts": [
                 "server/map_bounds.lua",
                 "server/json.lua"
         ],
         "client_scripts": [
                 "client/cl_map_bounds.lua"
-        ]
+        ],
+        "auto_updater": {
+           "package.json": "https://raw.githubusercontent.com/vugi99/onset-bounds/master/package.json",
+           "server/map_bounds.lua": "https://raw.githubusercontent.com/vugi99/onset-bounds/master/server/map_bounds.lua",
+           "server/json.lua": "https://raw.githubusercontent.com/vugi99/onset-bounds/master/server/json.lua",
+           "client/cl_map_bounds.lua": "https://raw.githubusercontent.com/vugi99/onset-bounds/master/client/cl_map_bounds.lua"
+        }
 }
